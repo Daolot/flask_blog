@@ -1,15 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to FlaskBlog {% endblock %}</h1>
-    {% for post in posts %}
-        <a href="{{ url_for('post', post_id=post['id']) }}">
-            <h2>{{ post['title'] }}</h2>
+    <h1>{% block title %} Welcome to FlaskBlog modified by Vitalii{% endblock %}</h1>
+        <a href="test">
+            <h2>{{ post }}</h2>
         </a>
-        <span class="badge badge-primary">{{ post['created'] }}</span>
-        <a href="{{ url_for('edit', id=post['id']) }}">
+        <span class="badge badge-primary">{{ post }}</span>
+        <a href="test2">
             <span class="badge badge-warning">Edit</span>
         </a>
         <hr>
-    {% endfor %}
+
 {% endblock %}
